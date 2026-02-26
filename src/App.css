@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-app: #dfe7ed;
+  --bg-chat: #f0f2f5;
+  --bg-message-list: #efeae2;
+  --header-bg: #202c33;
+  --header-text: #e9edef;
+  --header-sub: #8696a0;
+  --bubble-own: #d9fdd3;
+  --bubble-own-shadow: rgba(0, 0, 0, 0.08);
+  --bubble-other: #ffffff;
+  --bubble-other-shadow: rgba(0, 0, 0, 0.08);
+  --sender-color: #06cf9c;
+  --time-color: #8696a0;
+  --input-bg: #f0f2f5;
+  --input-border: #d1d7db;
+  --send-btn: #00a884;
+  --pdf-icon: #e53935;
+  --text-primary: #111b21;
+  --text-secondary: #667781;
+  --accent: #00a884;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-app);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.app-state {
+  font-size: 16px;
+  color: #667781;
+  text-align: center;
+  padding: 40px;
+}
+
+.app-state.error {
+  color: #e53935;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 0;
+    align-items: stretch;
+  }
+}

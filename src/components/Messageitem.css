@@ -1,0 +1,184 @@
+.message-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  margin-bottom: 2px;
+  max-width: 100%;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--other {
+  justify-content: flex-start;
+}
+
+/* Avatar for other users */
+.message-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00a884, #008f73);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2px;
+}
+
+/* Bubbles */
+.message-bubble {
+  max-width: 65%;
+  padding: 6px 9px 8px;
+  border-radius: 8px;
+  position: relative;
+  word-break: break-word;
+  overflow: hidden;
+}
+
+.bubble--own {
+  background-color: var(--bubble-own);
+  border-top-right-radius: 2px;
+  box-shadow: 0 1px 2px var(--bubble-own-shadow);
+}
+
+.bubble--other {
+  background-color: var(--bubble-other);
+  border-top-left-radius: 2px;
+  box-shadow: 0 1px 2px var(--bubble-other-shadow);
+}
+
+.bubble-sender {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sender-color);
+  margin-bottom: 3px;
+  line-height: 1.2;
+}
+
+.bubble-time {
+  display: block;
+  font-size: 11px;
+  color: var(--time-color);
+  text-align: right;
+  margin-top: 3px;
+  line-height: 1;
+}
+
+/* Text */
+.msg-text {
+  font-size: 14.5px;
+  color: var(--text-primary);
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* Media wrapper */
+.msg-media {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.msg-caption {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Image */
+.msg-image {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Video */
+.msg-video {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  background: #000;
+}
+
+/* PDF */
+.msg-pdf {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
+  padding: 8px 10px;
+  min-width: 200px;
+  transition: background 0.15s;
+}
+
+.msg-pdf:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.msg-pdf__icon {
+  width: 36px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.msg-pdf__icon svg {
+  width: 100%;
+  height: 100%;
+  color: var(--pdf-icon);
+}
+
+.msg-pdf__info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.msg-pdf__name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.msg-pdf__label {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .message-bubble {
+    max-width: 80%;
+  }
+
+  .msg-image {
+    max-width: 100%;
+  }
+
+  .msg-video {
+    max-width: 100%;
+  }
+
+  .msg-pdf {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .msg-text {
+    font-size: 14px;
+  }
+}
