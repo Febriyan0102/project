@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ChatContainer from "./Components/ChatContainer";
+import ChatContainer from "./components/ChatContainer";
 import "./App.css";
 
 const CURRENT_USER = "customer@mail.com";
